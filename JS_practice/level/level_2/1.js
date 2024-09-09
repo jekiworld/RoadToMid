@@ -1,7 +1,6 @@
 function stringconverter(a){
     let string = a.toString();
-    const [array] = string.split('');
-    console.log([array]);
+    console.log(string[0]);
 };
 
 
