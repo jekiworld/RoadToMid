@@ -19,7 +19,6 @@ button.addEventListener('click', function () {
     })
 
 
-    // document.body.tasks.append(task);
     tasks.append(task);
 
     tasks.append(button_delete);
