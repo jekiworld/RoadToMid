@@ -1,0 +1,28 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input {
+    border: rgb(32, 97, 203) 2px solid;
+    border-radius: 2px;
+    width: 60%;
+}
+
+.button{
+    background-color: rgb(32, 97, 203);
+    color: white;
+    border: none;
+    border-radius: 2px;
+}
+
+.container {
+    /* margin-top: -100px; */
+    display: flex;
+    height: 30px;
+    gap: 10px;
+    width: 100%;
+    /* align-items: center; */
+    justify-content: center;
+}
