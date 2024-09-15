@@ -39,3 +39,4 @@ const getNamesData = async () => {
 }
 
 getNamesData();
+ get
