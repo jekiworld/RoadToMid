@@ -15,3 +15,4 @@ let reversed = arr.reverse();
 
 console.log(reversed);
 
+// либо можно сделать так let digitsArray = number.toString().split('').map(Number);
