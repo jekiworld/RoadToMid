@@ -1,14 +1,16 @@
-function countCharacters(str) {
-    const charCount = {};
-    for (const char of str) {
-        if (charCount[char]) {
-            charCount[char]++;
-        } else {
-            charCount[char] = 1;
+var groupAnagrams = function (strs) {
+    let hashmap = {};
+
+    for (const word of strs) {
+        let sortedword = word.split('').sort().join('');
+
+        if (!hashmap[sortedword]) {
+            hashmap[sortedword] = [];
+        }
+
+        if(hashmap[sortedword]){
+            hashmap[sortedword].push(word);
         }
     }
-    return charCount;
-}
-
-
-console.log(countCharacters('banan'));
+    return Object.values(hashmap)
+};
