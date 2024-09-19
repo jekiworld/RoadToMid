@@ -1,14 +1,19 @@
-function countCharacters(str) {
-    const charCount = {};
-    for (const char of str) {
-        if (charCount[char]) {
-            charCount[char]++;
-        } else {
-            charCount[char] = 1;
+var groupAnagrams = function (strs) {
+    let hashmap = {};
+    for (const word of strs) {
+        let sorted = word.split('').sort().join('');
+
+        if(!hashmap[sorted]){
+            hashmap[sorted]=[];
+        }
+
+        if(hashmap[sorted]){
+            hashmap[sorted].push(word);
         }
     }
-    return charCount;
-}
+    console.log(Object.values(hashmap));
+    return Object.values(hashmap);
+};
 
 
-console.log(countCharacters('-1023-12093-0219'));
+groupAnagrams(['k', 'aet', 'tae', 'sd'])
