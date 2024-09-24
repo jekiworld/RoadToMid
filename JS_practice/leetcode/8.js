@@ -1,32 +1,21 @@
-// var containsDuplicate = function (nums) {
-//     const a = new Set(nums);
-//     if(a.size !== nums.length){
-//         console.log("true")
-//         console.log(a);
-//         console.log(nums);
-//         console.log(a.size);
-//         console.log(nums.length);
+function containsNearbyDuplicate(nums, k) {
+    const indexMap = {};
 
-//         return true;        
-//     }
-//     console.log("fasle")
-//     return false;
-// };
+    for (let i = 0; i < nums.length; i++) {
+        const num = nums[i];
 
+        if (indexMap[num] !== undefined) {
+            if (i - indexMap[num] <= k) {
+                return true;
+            }
+        }
 
-var containsDuplicate = function(nums) {
- const table = {};
- for(const i of nums){
-    if(table[i]){
-     
-        return true;
-    } else {
-        table[i] = true;
+        indexMap[num] = i;
     }
- }
- console.log("false");
 
- return false;
+    return false;
 }
 
-containsDuplicate([1,2,3,1]);
+console.log(containsNearbyDuplicate([1, 2, 3, 1], 3));
+console.log(containsNearbyDuplicate([1, 0, 1, 1], 1));
+console.log(containsNearbyDuplicate([1, 2, 3, 1, 2, 3], 2)); 
