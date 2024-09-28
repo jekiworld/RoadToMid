@@ -16,4 +16,4 @@ var groupAnagrams = function (strs) {
 };
 
 
-groupAnagrams(['k', 'aet', 'tae', 'sd'])
+groupAnagrams(['k', 'aet', 'tae', 'ssd'])
