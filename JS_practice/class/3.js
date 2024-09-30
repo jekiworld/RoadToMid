@@ -9,6 +9,8 @@ class Vehicle {
     }
 
     end() {
+        console.log(`${this.type}  останавливается`)
+
         return `${this.type} останавливается`
     }
 }
@@ -23,7 +25,14 @@ class Brand extends Vehicle{
         const startMessage = this.start();
         return `${this.brand} едет`
     }
+
+    stop(){
+        const endMessage = this.end();
+        return `${this.brand} stop`
+    }
 }
 
 const Toyota = new Brand('Автомобиль', 'Тойота');
 console.log(Toyota.go());
+
+console.log(Toyota.stop());
