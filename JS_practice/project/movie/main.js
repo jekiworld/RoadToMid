@@ -2,15 +2,20 @@ const input = document.getElementById('search');
 const button = document.getElementById('searchButton');
 const movie_catalog = document.getElementById('movie_catalog')
 const apiKey = 'f791343b';
-const url = `http://www.omdbapi.com/?apikey=${apiKey}&s=${input.value}`;
 
 
 button.addEventListener('click', function () {
+
+
     async function fetchData() {
         try {
+
+            const url = `http://www.omdbapi.com/?apikey=${apiKey}&s=${input.value}`;
             const response = await fetch(url)
             const data = await response.json();
+            movie_catalog.innerHTML = 'Список найденных фильмов:';
             movie(data.Search);
+
         } catch (error) {
             console.log('Error', error);
         }
