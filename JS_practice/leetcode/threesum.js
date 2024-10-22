@@ -6,14 +6,18 @@ var threeSum = function (nums) {
     const res = [];
 
     while (left < right) {
-        if (nums[left] + nums[right] + nums[z] > 0) {
+        if(nums[z] + nums[left] + nums[right] < 0){
             left++;
-            z++;
-        } else if (nums[left] + nums[right] + nums[z] < 0) {
+            console.log(left);
+            if(left === right - 1){
+                z++;
+            }
+        }
+        else if(nums[z] + nums[left] + nums[right] > 0){
             right--;
-        } else if (nums[left] + nums[right] + nums[z] === 0) {
-            res.push([nums[left], nums[right], nums[z]]);
-            console.log([nums[left], nums[right], nums[z]]);
+        }
+        else if(nums[z] + nums[left] + nums[right] === 0){
+            console.log([nums[z], nums[left], nums[right]]);
         }
     }
 };
