@@ -25,4 +25,4 @@ var evalRPN = function (tokens) {
     return stack[0];
 };
 
-evalRPN(["2", "1", "+", "3", "*"])
+evalRPN(["2", "1", "+", "3", "*"])//
