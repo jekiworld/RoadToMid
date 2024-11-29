@@ -9,4 +9,4 @@ var asteroidCollision = function (asteroids) {
 };
 
 
-asteroidCollision([5, 10, -5]);
+asteroidCollision([5, 10, -5])
