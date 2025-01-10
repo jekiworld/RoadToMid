@@ -71,7 +71,6 @@ function checkInclusion(s1, s2) {
     const s2Count = new Array(26).fill(0);
 
     const charCode = "a".charCodeAt();
-    // console.log(charCode);
 
     for (let char of s1) {
         s1Count[char.charCodeAt()-charCode]++;
